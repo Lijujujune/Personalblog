@@ -1,0 +1,52 @@
+:root {
+
+  --color-dark: #3a3a3a;
+  --color-light: #eee;
+  
+  --color-text: var(--color-dark);
+  --color-background: var(--color-light);
+  
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#postsList {
+  list-style: none;
+  padding:0.5em;
+  margin: 6px;
+}
+
+#postsList li {
+  background-color: var(--color-background);
+  border: 1px solid #555;
+  border-radius: 12px;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+button {
+  background-color: #ddd;
+  color: #555;
+  border: #555;
+  border-radius: 8px;
+  padding: 1em;
+  cursor: pointer;
+} 
+
+
+.dark-mode {
+  /* flip the light and dark variables */
+  --color-text: var(--color-light);
+  --color-background: var(--color-dark);
+}
+
+body.dark-mode #postsList li {
+  --color-text: var(--color-light);
+  --color-background: var(--color-dark);
+  border-color: #fff;
+  color: #fff;
+}
