@@ -15,7 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
               return;
           }
 
-          const post = { username, title, content };
+          const post = { 
+            username, 
+            title, 
+            content,
+            timestamp: new Date().toLocaleString()};
+            
           const posts = JSON.parse(localStorage.getItem('posts')) || [];
           posts.push(post);
           localStorage.setItem('posts', JSON.stringify(posts));
